@@ -7,8 +7,8 @@ int main(){
     
     int menor, maior;
     menor = maior = numeros[0];
-                        //Whaaat a hell
-    for(int i = 0; i <= sizeof(numeros)/sizeof(int)-1; i++){
+                        
+    for(int i = 0; i < sizeof(numeros)/sizeof(int); i++){
         printf("%d || ", numeros[i]);
         if(numeros[i] > maior){
             maior = numeros[i];
