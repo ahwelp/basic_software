@@ -6,5 +6,12 @@ quantidade de letras.
 #include <stdio.h>
 
 int main(){
+    
+    int number = 0;
+    
+    do{
+        printf("Digit a number between 1 - 10: ");
+        scanf("%d", &number);
+    }while(number < 0 || number > 10);
 
 }
