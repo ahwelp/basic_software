@@ -26,6 +26,9 @@ int main(){
     }  
 
     while( fscanf(file, "%d", &number) != EOF ){
+        if(number < 0){            
+            continue;
+        }
         if(number < 99){
             gs[0]++;
             continue;
