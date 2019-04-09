@@ -4,8 +4,10 @@ variados, e identifique a primeira e a última palavra em relação à ordem
 alfabética. Por exemplo, em uma 
 lista {"nh", "wa", "ix", "es", "ck"}, a primeira seria "ck", e a 
 última "wa".*/
-#include <stdio.h>
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 int main(){
 
 }
