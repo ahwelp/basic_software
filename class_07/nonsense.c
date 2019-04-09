@@ -17,7 +17,7 @@ int main(){
         temp = (char *) index;
         /* Print the parsed char */
         printf("%c", *temp);
-        /* Increment the pointer by one char. Eventhow it is a integer array */
+        /* Increment the pointer by one char. Even though it is a integer array */
         index += sizeof(char);
     }
     /* Do not join the execution end on the bash cursor */
