@@ -87,24 +87,26 @@ void array_sort(double *vet, int n) {
  elementos, além de ponteiros para três doubles. Nesses ponteiros para double 
 devem ser armazenados o menor valor presente, a 
 mediana e o maior valor. Dica: Utilize a função array_sort().*/
-void array_statistics(double *vet, int n, double *menor, double *maior, double *medio) {
+/* OBS PARA O PROFESSOR - Não conseguimos utilizar 3 doubles como parâmetro, mas passando um array com 3 elementos deu Ok */
+void array_statistics(double *vet, int n, double *stats) {
 	array_sort(vet, n);
-
+    stats[2] = 0;
     if(n % 2 == 0){
-        *medio = (vet[n/2] + vet[(n/2)+1]) / 2;        
+        stats[2] = (vet[n/2] + vet[(n/2)+1]) / 2;        
     }else{
-        *medio = vet[(int)ceil(n/2)];
-    }
-    *maior = vet[0];
-    *menor = vet[0];
+        stats[2] = vet[(int)ceil(n/2)];
+    }    
+    stats[0] = vet[0];
+    stats[1] = vet[0];
     for(int i = 0; i < n; i++){        
-        if(vet[i] > *maior){
-            *maior = vet[i];
+        if(vet[i] > stats[1]){
+            stats[1] = vet[i];
         }
-        if(vet[i] < *menor){
-            *menor = vet[i];
+        if(vet[i] < stats[0]){
+            stats[0] = vet[i];
         }
     }
+
 }
 
 

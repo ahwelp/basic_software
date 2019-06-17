@@ -4,11 +4,7 @@ int main (void){
 	
     double *vet = NULL;
     double *vet2 = NULL;
-
-
-
-    double *maior, *menor, *medio;
-    maior = menor = medio = 0;
+    double *stats = NULL;
 
     int vet_size, temp, last;
     vet_size = 10;
@@ -60,11 +56,11 @@ int main (void){
     
     //Testing array_statistics
     vet2[3] = -200;
-    array_statistics(vet2, vet_size, menor, maior, medio);
-    printf("Maior: %lf, Menor: %lf, Medio: %lf", *maior, *menor, *medio);
+    array_statistics(vet2, vet_size, stats);
+    printf("Maior: %lf, Menor: %lf, Medio: %lf", stats[1], stats[0], stats[3]);
     printf("\n");
 	printf("\n");
-    return 0;
+
 
     //Testing input_array
     int size = 0;
@@ -72,5 +68,5 @@ int main (void){
     array_input = input_array(*size);
     printf("\n");
 	printf("\n");
-    return 0;
+
 }
