@@ -7,7 +7,7 @@ int main (void){
     double *stats = NULL;
 
     int vet_size, temp, last;
-    vet_size = 10;
+    vet_size = 10;    
     temp = 1;
     last = 0;
     
@@ -16,15 +16,16 @@ int main (void){
     
     for(int i = 0; i < vet_size; i++){
         vet[i] = temp;
+        last = i;
         temp = temp + last;
-        last = temp;
+        
     }
-
+    
     //Testing array_print
     array_print(vet, vet_size);
 	printf("\n");
 	printf("\n");
-
+return 1;
     //Testing array_invert
     vet = array_invert(vet, vet_size);
     array_print(vet, vet_size);
@@ -63,9 +64,9 @@ int main (void){
 
 
     //Testing input_array
-    int size = 0;
+    int *size = NULL;
     double *array_input = NULL;
-    array_input = input_array(*size);
+    array_input = input_array(size);
     printf("\n");
 	printf("\n");
 
